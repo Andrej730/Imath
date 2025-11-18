@@ -176,6 +176,7 @@ else()
   set(extension_suffix "${CMAKE_SHARED_MODULE_SUFFIX}")
 endif()
 # Add ABI tag to extension names, e.g. '.cp311-win_amd64'
+message(FATAL_ERROR "Python3_SOABI '${Python3_SOABI}'")
 set_target_properties(${PYIMATH_MODULE} PROPERTIES SUFFIX ".${Python3_SOABI}${extension_suffix}")
 
 set_target_properties(${PYIMATH_MODULE} PROPERTIES
